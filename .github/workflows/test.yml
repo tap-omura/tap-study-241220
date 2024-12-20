@@ -30,6 +30,9 @@ jobs:
         #        if: steps.cache.outputs.cache-hit != 'true'
         run: composer install --no-interaction --prefer-dist
 
+      - name: Build
+        run: php src/index.php
+
       - uses: actions/upload-artifact@v4
         with:
           path: artifacts
