@@ -1,6 +1,7 @@
 {
     "require": {
-        "nesbot/carbon": "^3.8"
+        "nesbot/carbon": "^3.8",
+        "league/csv": "*"
     },
     "scripts": {
         "pre-install-cmd": [

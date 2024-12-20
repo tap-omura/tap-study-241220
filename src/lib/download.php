@@ -1,8 +1,17 @@
 <?php
 
-$contents = file_get_contents(
-    "https://www.geospatial.jp/ckan/dataset/1bfb4f7d-c92b-4505-a6fe-452aaa220b0d/resource/73d9dc81-e3da-4e76-86fc-2ac4190e0d89/download/170301aed.csv"
-);
-$fp = fopen(__DIR__ . '/../../data/170301aed.csv', "w");
+$contents = file_get_contents("https://www.post.japanpost.jp/zipcode/dl/oogaki/zip/27osaka.zip");
+$fp = fopen(__DIR__ . '/../../data/27osaka.zip', "w");
 fwrite($fp, $contents);
 fclose($fp);
+
+$zipFile = __DIR__ . '/../../data/27osaka.zip';
+$extractTo = __DIR__ . '/../../data/';
+
+$zip = new ZipArchive;
+if ($zip->open($zipFile) === true) {
+    $zip->extractTo($extractTo);
+    $zip->close();
+} else {
+    echo '解凍に失敗しました。';
+}

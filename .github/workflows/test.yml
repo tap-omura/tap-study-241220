@@ -32,7 +32,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          path: data
+          path: artifacts
 
       - name: Display structure of downloaded files
-        run: ls -R data
+        run: ls -R artifacts
