@@ -7,7 +7,7 @@ use League\Csv\Statement;
 
 
 // CSVファイルを読み込み、Shift-JISからUTF-8に変換
-$csvContent = file_get_contents(__DIR__ . '/../data/27OSAKA.csv');
+$csvContent = file_get_contents(__DIR__ . '/../data/27OSAKA.CSV');
 $csvContent = mb_convert_encoding($csvContent, 'UTF-8', 'SJIS-win');
 $tempCsvPath = __DIR__ . '/../data/temp_27OSAKA.csv';
 file_put_contents($tempCsvPath, $csvContent);
