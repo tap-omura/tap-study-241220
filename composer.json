@@ -1,0 +1,13 @@
+{
+    "require": {
+        "nesbot/carbon": "^3.8"
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "php src/lib/download.php"
+        ],
+        "pre-update-cmd": [
+            "php src/lib/download.php"
+        ]
+    }
+}

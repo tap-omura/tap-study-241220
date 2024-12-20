@@ -1,0 +1,7 @@
+services:
+  php-tap-study:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
