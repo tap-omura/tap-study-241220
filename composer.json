@@ -10,5 +10,8 @@
         "pre-update-cmd": [
             "php src/lib/download.php"
         ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
     }
 }
