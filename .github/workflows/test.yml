@@ -15,7 +15,7 @@ jobs:
 
       - uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.4'
+          php-version: '8.3'
 
       - name: cache vendor
         id: cache
@@ -30,7 +30,7 @@ jobs:
         #        if: steps.cache.outputs.cache-hit != 'true'
         run: composer install --no-interaction --prefer-dist
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           path: data
 
